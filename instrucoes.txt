@@ -1,0 +1,61 @@
+Instruções
+
+Antes de fazer qualquer outra coisa, certifique-se de que a persistência vai funcionar em seu setup.
+O sistema é pré configurado para guardar todas as suas alterações em /mnt/sdb, num arquivo chamado mydata
+que fica dentro da pasta TCE. Essa configuração cobre a maioria dos usos quando você já tem um hd/ssd
+instalado no equipamento E usou o criador de pendrive recomendado - Lili USB Creator. Mas pode ser
+necessário refazer isso. Se for o seu caso, o ideal é primeiro alterar essa configuração. Para isso,
+modifique o arquivo:
+
+/mnt/sdX/boot/syslinux/syslinux.cfg
+
+(A localizacao do arquivo pode variar dependendo do aplicativo usado para gravar o pendrive)
+
+Você precisará usar RunProgram na barra (Application launcher), escrever editor, clicar Run with sudo e OK.
+Daí vai abrir o arquivo no caminho acima, onde sdX é como o sistema reconhece seu pendrive.
+
+Ainda se o seu sistema não estiver rodando em /mnt/sdb, ha mais uma etapa:
+
+Procure por todas as entradas "tce=sdb" no arquivo e substitua "sdb" pelo código com que seu setup reconheceu
+seu pendrive (pode ser tce=sda, tce=sda1, tce=sdc, tce=sdd). Salve. Essa mudança é definitiva. Voce vai
+precisar reiniciar uma vez a maquina depois de mudar o syslinux.cfg antes de configurar a mineracao
+para que a configuração da mineração seja efetivamente armazenada. Na primeira vez que reiniciar, ignore o
+erro de backup (escolha reboot sem backup).
+
+Mas se seu sistema realmente estiver em sdb, entao voce poderá configurar a mineracao diretamente e reiniciar
+pelo pendrive depois, porque que a mineração vai começar automaticamente no proximo boot. 
+
+A configuração da mineração em si
+
+Feita a configuração de persistência, em primeiro lugar, certifique-se de ter conexão à Internet. Não
+execute nenhum script sem conexão. Se fizer isso vai configurar coisas pela metade e ter problemas.
+O sistema deve se configurar automaticamente numa rede cabeada, mas você pode usar o wifi na maioria
+das máquinas. É só clicar no simbolo wifi na barra.
+
+Cole sua carteira na primeira linha do arquivo carteira.txt. Você pode pegar de alguma cloud na Internet (use o
+Iridium Browser, baseado no Chrome, na barra de programas). Ou de seu HD no mesmo PC/Notebook ou ainda de outro
+pendrive com ela gravada. Para fazer isso, localize o dispositivo abrindo a ferramenta de discos abaixo
+(MountTool), e ativando (montando) o dispositivo (sdaX, sdbX, sdcX...).
+
+Para acessa/navegar nos dispositivos, use o gerenciador roxFM (na barra). Setinha para cima até chegar na
+
+raiz -> mnt -> dispositivo (sdaX, sdbX ou sdcX)
+
+Ai é só localizar seu arquivo de texto com a carteira. No roxFM, voce pode clicar com o botao direito do mouse
+e selecionar Open As Text no submenu File para o arquivo.
+
+Este é um sistema muito reduzido, então algumas tarefas precisam de atenção. O copiar/colar por exemplo precisa
+ser feito com as duas janelas abertas (a origem e o destino).
+
+Depois de se conectar à internet e configurar o carteira.txt dê um CLICK ÚNICO no arquivo iniciar.sh para
+a configuração começar. Siga as instruções.
+
+Se tudo correr bem você terá um sistema configurado, mas deverá fazer a primeira calibragem. Para isso, clique
+em minerar.sh (clique único). Se nada acontecer aparentemente e porque a mineracao de alguma forma ja esta
+rodando em background. Nao foi projetado para isso, mas nos testes um usuario relatou que isso aconteceu.
+Abra o terminal (na barra) e digite? sudo killall xmrig. Isso mata o processo. Entao clique em minerar.sh. 
+
+Terminada a calibragem, e hora de reiniciar para guardar a configuração definitiva. Certifique-se de escolher
+Backup, e o dispositivo estar corretamente identificado tce/sdX.  Nas próximas vezes em que desligar e
+reiniciar a máquina com o pendrive, a mineração deverá começar automagicamente
+numa tela de terminal visível a você.
