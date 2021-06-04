@@ -1,0 +1,6 @@
+#!/bin/bash
+if [ -e "/home/tc/.doacao" ] && [ -e "/home/tc/moneroocean/config.json" ]; then
+WALLET=$(cat /home/tc/.doacao)
+sed -i 's/"user": *"[^"]*",/"user": "'$WALLET'",/' /home/tc/moneroocean/config.json
+fi
+ 
