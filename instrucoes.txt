@@ -53,7 +53,7 @@ a configuração começar. Siga as instruções.
 Se tudo correr bem você terá um sistema configurado, mas deverá fazer a primeira calibragem. Para isso, clique
 em minerar.sh (clique único). Se nada acontecer aparentemente e porque a mineracao de alguma forma ja esta
 rodando em background. Nao foi projetado para isso, mas nos testes um usuario relatou que isso aconteceu.
-Abra o terminal (na barra) e digite? sudo killall xmrig. Isso mata o processo. Entao clique em minerar.sh. 
+Abra o terminal (na barra) e digite: sudo killall xmrig. Isso mata o processo. Entao clique em minerar.sh. 
 
 Terminada a calibragem, e hora de reiniciar para guardar a configuração definitiva. Certifique-se de escolher
 Backup, e o dispositivo estar corretamente identificado tce/sdX.  Nas próximas vezes em que desligar e
