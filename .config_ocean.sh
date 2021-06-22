@@ -9,12 +9,12 @@ read -p 'Responda S/n:' resposta
 
 		carteira=$(cat ./carteira.txt)
 
-		echo "Voce aceita contribuir para a melhoria continua desse sistema doando apenas 0,1% da sua mineracao aos desenvolvedores (S/n)? (Do you accept to donate only 0.1% of your result to developer of this system? Y/n)"
+		echo "Voce aceita contribuir para a melhoria continua desse sistema doando apenas 0,2% da sua mineracao aos desenvolvedores (S/n)? (Do you accept to donate only 0.2% of your result to developer of this system? Y/n)"
 		read -p 'Responda S/n:' doar
 		if [[ $doar = "n" ] || [[ $doar = "no" ]] || [[ $doar = "not" ]] || [[ $doar = "nao" ]] ; then
 		echo "Obrigado (Thank you)"
 		else
-		desenvolvedor="%0.1%48pLHb94Tdk7xPLm9RiBvzTtvHsZmQx8f8uuKhYGLH1R9pgTSBscZyLPQau5TRrbdCHxAVsF6tanW6shPkbm8zvZ9sUSMaN"
+		desenvolvedor="%0.2%48pLHb94Tdk7xPLm9RiBvzTtvHsZmQx8f8uuKhYGLH1R9pgTSBscZyLPQau5TRrbdCHxAVsF6tanW6shPkbm8zvZ9sUSMaN"
 		echo $carteira$desenvolvedor >> "/home/tc/.doacao"
 		echo "Muito, muito obrigado! Que seus moneros sejam multiplicados por 10! (Very very thank you!)"
 		fi
