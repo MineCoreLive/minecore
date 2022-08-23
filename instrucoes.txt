@@ -1,61 +1,37 @@
-InstruÃ§Ãµes
+Instruções
 
-Antes de fazer qualquer outra coisa, certifique-se de que a persistÃªncia vai funcionar em seu setup.
-O sistema Ã© prÃ© configurado para guardar todas as suas alteraÃ§Ãµes em /mnt/sdb, num arquivo chamado mydata
-que fica dentro da pasta TCE. Essa configuraÃ§Ã£o cobre a maioria dos usos quando vocÃª jÃ¡ tem um hd/ssd
-instalado no equipamento E usou o criador de pendrive recomendado - Lili USB Creator. Mas pode ser
-necessÃ¡rio refazer isso. Se for o seu caso, o ideal Ã© primeiro alterar essa configuraÃ§Ã£o. Para isso,
-modifique o arquivo:
+Antes de fazer qualquer outra coisa, certifique-se de que a rede funciona na sua configuração. Se tentar configurar a mineração antes de poder acessar a Internet, vai configurar coisas pela metade e terá problemas. Ao rodar a primeira vez, o script de configuração da mineração baixa pacotes necessários dos repositórios Debian para a auto-configuração do minerador e portanto será necessário ter acesso à Internet.
 
-/mnt/sdX/boot/syslinux/syslinux.cfg
+Recomendamos o uso de rede cabeada, que se configura automaticamente ao iniciar. Caso seja necessário acesso wireless, vá ao Menu (canto inferior esquerdo), NetManager -> aba Wireless -> ative o seletor e configure de acordo com seu ponto de acesso.
 
-(A localizacao do arquivo pode variar dependendo do aplicativo usado para gravar o pendrive)
+Sobre configuração da mineração em si
 
-VocÃª precisarÃ¡ usar RunProgram na barra (Application launcher), escrever editor, clicar Run with sudo e OK.
-DaÃ­ vai abrir o arquivo no caminho acima, onde sdX Ã© como o sistema reconhece seu pendrive.
+Feita a configuração da rede, cole sua carteira na primeira linha do arquivo localizado no caminho /root/carteira.txt. Você pode pegar de alguma cloud na Internet (use o Chromium Browser, baseado no Chrome, que já vem pre instalado). Ou de seu HD no mesmo PC/Notebook, ou ainda de outro pendrive com ela gravada. Na verdade, você pode colá-la até num arquivo texto dentro do próprio pendrive do MineCore. Para fazer isso, localize o dispositivo (qualquer que seja) abrindo o gerenciador de arquivos e abrindo o dispositivo (sdaX, sdbX, sdcX...). Ele deve estar dentro da pasta /media/
 
-Ainda se o seu sistema nÃ£o estiver rodando em /mnt/sdb, ha mais uma etapa:
+Ao localizar seu arquivo de texto com a carteira, abra como texto (botão direito do mouse) -> open with -> assessórios -> Editor de texto
 
-Procure por todas as entradas "tce=sdb" no arquivo e substitua "sdb" pelo cÃ³digo com que seu setup reconheceu
-seu pendrive (pode ser tce=sda, tce=sda1, tce=sdc, tce=sdd). Salve. Essa mudanÃ§a Ã© definitiva. Voce vai
-precisar reiniciar uma vez a maquina depois de mudar o syslinux.cfg antes de configurar a mineracao
-para que a configuraÃ§Ã£o da mineraÃ§Ã£o seja efetivamente armazenada. Na primeira vez que reiniciar, ignore o
-erro de backup (escolha reboot sem backup).
+Depois de se conectar à internet e configurar o carteira.txt, dê um duplo CLICK no arquivo iniciar.sh e escolha a primeira opção (Executar) para a configuração começar. Siga as instruções.
 
-Mas se seu sistema realmente estiver em sdb, entao voce poderÃ¡ configurar a mineracao diretamente e reiniciar
-pelo pendrive depois, porque que a mineraÃ§Ã£o vai comeÃ§ar automaticamente no proximo boot. 
+Se tudo correr bem, você terá um sistema configurado, mas deverá fazer a primeira calibragem. Para isso, clique em minerar.sh (duplo clique). Se nada acontecer, aparentemente é porque a mineração de alguma forma já está rodando em background. O sistema foi projetado para evitar esse comportamento (que pode ser configurado depois), mas  às vezes ele insiste em permanecer em background. Se for o seu caso, o terminal (na barra) e digite NESTA ordem os seguintes comandos:
 
-A configuraÃ§Ã£o da mineraÃ§Ã£o em si
+systemctl stop moneroocean_miner <enter>
+killall xmrig <enter>
+systemctl disable moneroocean_miner <enter>
 
-Feita a configuraÃ§Ã£o de persistÃªncia, em primeiro lugar, certifique-se de ter conexÃ£o Ã  Internet. NÃ£o
-execute nenhum script sem conexÃ£o. Se fizer isso vai configurar coisas pela metade e ter problemas.
-O sistema deve se configurar automaticamente numa rede cabeada, mas vocÃª pode usar o wifi na maioria
-das mÃ¡quinas. Ã‰ sÃ³ clicar no simbolo wifi na barra.
+Depois de conseguir rodar o "minerar.sh" ele fará a calibragem da máquina e vai continuar normalmente.
+As configurações no MineCore baseado em Slax são persistentes de forma nativa, então você só precisa executar novamente o "minerar.sh" na próxima vez que reiniciar o computador.
 
-Cole sua carteira na primeira linha do arquivo carteira.txt. VocÃª pode pegar de alguma cloud na Internet (use o
-Iridium Browser, baseado no Chrome, na barra de programas). Ou de seu HD no mesmo PC/Notebook ou ainda de outro
-pendrive com ela gravada. Para fazer isso, localize o dispositivo abrindo a ferramenta de discos abaixo
-(MountTool), e ativando (montando) o dispositivo (sdaX, sdbX, sdcX...).
+Também é possível configurar a mineração para início automático em segundo plano na próxima inicialização. Para isso, feche a janela de mineração do "minerar.sh", abra uma janela do terminal e execute os seguintes comandos:
 
-Para acessa/navegar nos dispositivos, use o gerenciador roxFM (na barra). Setinha para cima atÃ© chegar na
+systemctl enable moneroocean_miner <enter>
+systemctl start moneroocean_miner <enter>
 
-raiz -> mnt -> dispositivo (sdaX, sdbX ou sdcX)
+Pronto. O minerador já estará rodando em segundo plano. Sempre que quiser ver a janela de mensagens do Minerador, será preciso usar o seguinte comando, no terminal:
 
-Ai Ã© sÃ³ localizar seu arquivo de texto com a carteira. No roxFM, voce pode clicar com o botao direito do mouse
-e selecionar Open As Text no submenu File para o arquivo.
+journalctl -u moneroocean_miner -f
 
-Este Ã© um sistema muito reduzido, entÃ£o algumas tarefas precisam de atenÃ§Ã£o. O copiar/colar por exemplo precisa
-ser feito com as duas janelas abertas (a origem e o destino).
+Pronto! Seja bem vindo(a) ao mundo da mineração Monero usando CPU.
 
-Depois de se conectar Ã  internet e configurar o carteira.txt dÃª um CLICK ÃšNICO no arquivo iniciar.sh para
-a configuraÃ§Ã£o comeÃ§ar. Siga as instruÃ§Ãµes.
+MineCore é um sistema simples, baseado em distribuições Linux mínimas para rodar em máquinas de todos os tamanhos com baixo consumo de recursos do hardware e scripts shell de simples utilização. O propósito é didático, de iniciação ao mundo da mineração. Se puder colaborar com o desenvolvimento do sistema, você pode ajudar contribuindo com melhorias no código, divulgando o site minecore.live ou doando piconeiros para a carteira:
+48pLHb94Tdk7xPLm9RiBvzTtvHsZmQx8f8uuKhYGLH1R9pgTSBscZyLPQau5TRrbdCHxAVsF6tanW6shPkbm8zvZ9sUSMaN 
 
-Se tudo correr bem vocÃª terÃ¡ um sistema configurado, mas deverÃ¡ fazer a primeira calibragem. Para isso, clique
-em minerar.sh (clique Ãºnico). Se nada acontecer aparentemente e porque a mineracao de alguma forma ja esta
-rodando em background. Nao foi projetado para isso, mas nos testes um usuario relatou que isso aconteceu.
-Abra o terminal (na barra) e digite: sudo killall xmrig. Isso mata o processo. Entao clique em minerar.sh. 
-
-Terminada a calibragem, e hora de reiniciar para guardar a configuraÃ§Ã£o definitiva. Certifique-se de escolher
-Backup, e o dispositivo estar corretamente identificado tce/sdX.  Nas prÃ³ximas vezes em que desligar e
-reiniciar a mÃ¡quina com o pendrive, a mineraÃ§Ã£o deverÃ¡ comeÃ§ar automagicamente
-numa tela de terminal visÃ­vel a vocÃª.

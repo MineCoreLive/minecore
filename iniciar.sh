@@ -1,2 +1,4 @@
 #!/bin/bash
-aterm -e ./.config_ocean.sh &
+apt install curl
+wait 5
+xterm -e /root/.config_ocean.sh &
