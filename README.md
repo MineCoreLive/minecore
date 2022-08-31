@@ -29,7 +29,7 @@ A imagem final da distribuição remasterizada (MineCore_VX.iso) com as extensõ
 MineCoreSlax
 
 Foi usada apenas a ISO padrão da versão 11.3 do Debian baseada em Slax, com adição de pacotes:
-1. Chormium - pelo caminho tradicional da distribuição
+1. Chromium - pelo caminho tradicional da distribuição
 2. Curl - usando o instalador padrão do apt do Debian
 
 Além da inclusão, nas duas versões, dos mesmos scripts (adapatados a cada ambiente, claro) no espaço de usuário da distribuição específicos para preparar a mineração.
@@ -49,8 +49,6 @@ ________________________________________________________________
 
 <h2>A lightweight, complete Linux that runs on the USB stick and mines Monero cryptocurrency for you!</h2>
 
-3.636 / 5.000
-Resultados de tradução
 MineCoreSlax (https://www.minecore.live) is a variation of the original MineCore, but this time using the Debian-based Slax distribution (https://www.slax.org/). Just like the original based on the very light Tinycore (http://tinycorelinux.net/), MineCoreSlax is a distribution with a minimum ISO, which fits on any usb drive, fits a huge variety of machines - especially older ones - and has everything easy and virtually ready for Monero mining.
 
 Minecore was born from a personal challenge of being able to create a very light system capable of running mining on virtually any machine (as long as it is a 64-bit processor) in "live" mode, that is, that does not depend on installation or any changes to the hd or ssd with the computer's default operating system. You also needed to use a graphical GUI to make things like copy/paste wallet codes easy for inexperienced Linux users.
@@ -79,7 +77,7 @@ The final image of the remastered distribution (MineCore_VX.iso) with the necess
 MineCoreSlax
 
 Only the standard Debian version 11.3 ISO based on Slax was used, with added packages:
-1. Chormium - via the traditional distribution path
+1. Chromium - via the traditional distribution path
 2. Curl - using the standard Debian apt installer
 
 In addition to the inclusion, in both versions, of the same scripts (adapted to each environment, of course) in the user space of the specific distribution to prepare the mining.
