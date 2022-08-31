@@ -1,7 +1,7 @@
 # minecore
 <h2>Um Linux leve e completo que roda pelo pendrive e minera criptomoeda Monero para você!</h2>
 
-MineCoreSlax (https://www.minecore.live) é uma variação do original MineCore, mas dessa vez utilizando a distribuição Slax baseada em Debian. Assim como original baseado no levíssimo Tinycore (http://tinycorelinux.net/), MineCoreSlax é uma distribuiição com uma ISO mínima, que cabe em qualquer pendrive, se ajusta a uma veriedade enorme de máquinas - principalmente as mais antigas - e tem tudo fácil e praticamente pronto para a minieração de Monero.
+MineCoreSlax (https://www.minecore.live) é uma variação do original MineCore, mas dessa vez utilizando a distribuição Slax baseada em Debian (https://www.slax.org/). Assim como original baseado no levíssimo Tinycore (http://tinycorelinux.net/), MineCoreSlax é uma distribuiição com uma ISO mínima, que cabe em qualquer pendrive, se ajusta a uma veriedade enorme de máquinas - principalmente as mais antigas - e tem tudo fácil e praticamente pronto para a minieração de Monero.
 
 O Minecore nasceu de um desafio pessoal de conseguir criar um sistema muito leve capaz de rodar a mineração em praticamente qualquer máquina (desde que seja um processador 64 bits) em modo "live", ou seja, que não dependa de instalação ou qualquer alteração no hd ou ssd com o sistema operacional padrão do computador. Também era preciso usar uma GUI gráfica para facilitar coisas como copy/paste de códigos de carteira para usuários inexperientes no Linux.
 
@@ -51,7 +51,7 @@ ________________________________________________________________
 
 3.636 / 5.000
 Resultados de tradução
-MineCoreSlax (https://www.minecore.live) is a variation of the original MineCore, but this time using the Debian-based Slax distribution. Just like the original based on the very light Tinycore (http://tinycorelinux.net/), MineCoreSlax is a distribution with a minimum ISO, which fits on any pendrive, fits a huge variety of machines - especially older ones - and has everything easy and virtually ready for Monero mining.
+MineCoreSlax (https://www.minecore.live) is a variation of the original MineCore, but this time using the Debian-based Slax distribution (https://www.slax.org/). Just like the original based on the very light Tinycore (http://tinycorelinux.net/), MineCoreSlax is a distribution with a minimum ISO, which fits on any pendrive, fits a huge variety of machines - especially older ones - and has everything easy and virtually ready for Monero mining.
 
 Minecore was born from a personal challenge of being able to create a very light system capable of running mining on virtually any machine (as long as it is a 64-bit processor) in "live" mode, that is, that does not depend on installation or any changes to the hd or ssd with the computer's default operating system. You also needed to use a graphical GUI to make things like copy/paste wallet codes easy for inexperienced Linux users.
 
