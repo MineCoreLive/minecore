@@ -41,7 +41,7 @@ In English:
 https://translate.google.com/translate?sl=pt&tl=en&u=https://www.minecore.live
 
 Agradecimentos:
-Ao GaRocK pelo incentivo, revisão de scripts e criação do MineCore-utils, com ferramentas adicionais para MineCore
+Ao @GaRocK pelo incentivo, revisão de scripts e criação do MineCore-utils, com ferramentas adicionais para MineCore
 Ao AArteS, do grupo telegram Mineração de XMR BR. ⛏🧨💰⌛️🖥 pelo incentivo e feedback.
 A todo o pessoal do grupo Monero Brasil (telegram e matrix), em especial ao lozbek, pelo apoio e comentários.
 
@@ -86,7 +86,7 @@ Minecore also has a website:
 https://www.minecore.live
 
 Thanks:
-To GaRocK for encouragement, script review and creation of MineCore-utils, with additional tools for MineCore
+To @GaRocK for encouragement, script review and creation of MineCore-utils, with additional tools for MineCore
 To AArteS, from the telegram Mineração de XMR BR group. ⛏🧨💰⌛️🖥 for the encouragement and feedback.
 To all the staff of the Monero Brasil group (telegram and matrix), especially to lozbek, for their support and comments.
 
