@@ -13,8 +13,6 @@ A imagem do sistema tem apenas 190mb na versão com MineCore tradicional e 370mb
 
 Binários Inclusos no Projeto: 
 
-Os binários inclusos na pasta são:
-
 Uma imagem da distribuição TinyCore versão CorePure64 com o kernel recompilado para aceitar Huge Pages (TinyCorePure64 - CustomKernel.iso) - Válido apenas na versão MineCore tradicional
 
 A imagem final da distribuição remasterizada (MineCore_VX.iso) com as extensões necessárias para:
@@ -60,8 +58,6 @@ That's how MineCore was created, using a minimal Linux system, totally based on 
 The system image is only 190mb in the traditional MineCore version and 370mb in the MineCoreSlax version, and they have everything you need to turn your computer into a Monero-producing machine, a solid and reliable cryptocurrency. The new MineCoreSlax version brings an advantage that is the creation of persistence in a much simpler way when booting from the pendrive, as well as simplified ways of generating the usb boot media and the possibility of customization with Debian packages via apt.
 
 Binaries Included in the Project:
-
-The binaries included in the folder are:
 
 An image of the TinyCore distribution CorePure64 version with the kernel recompiled to accept Huge Pages (TinyCorePure64 - CustomKernel.iso) - Valid only in the traditional MineCore version
 
