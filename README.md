@@ -7,7 +7,7 @@ A primeira versão surgiu como MineCore apenas, um linux baseado na levíssima d
 
 Agora lançamos um novo branch, MineCoreSlax, variação utilizando a distribuição mínima mas mais versátil distro Slax 11.3, em sua vertente baseada em Debian (https://slax.org). Você pode ir direto para o branch da nova versão neste link: https://github.com/MineCoreLive/minecore/tree/MineCoreSlax.
 
-Ambos são distribuiições com uma ISO mínima, que cabe em qualquer drive de usb, se ajustam a uma variedade enorme de máquinas - principalmente as mais antigas - e tem tudo fácil e praticamente pronto para a minieração de Monero.
+Ambos são distribuições com uma ISO mínima, que cabe em qualquer drive de usb, se ajustam a uma variedade enorme de máquinas - principalmente as mais antigas - e tem tudo fácil e praticamente pronto para a minieração de Monero.
 
 Há diversos programas de mineração no mercado, quase todos de software livre. Mas aqueles que mineram via CPU são os mais práticos e acessíveis para os usuários comuns, que querem minerar uma criptomoeda em casa ou no computador do trabalho, para experimentar, para aprender, ou para usar a capacidade ociosa de um equipamento sem precisar investir em um monte de equipamentos especializados. 
 
